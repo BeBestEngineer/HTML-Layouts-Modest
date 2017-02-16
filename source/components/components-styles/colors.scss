@@ -1,0 +1,100 @@
+/*Links colors (begin)*/
+.links {
+  color: inherit;
+
+  &:hover, &:focus {
+    text-decoration: none;
+    color: $color-1-layout;
+    background-color: transparent;
+
+    .icons__svg-color {
+      fill: $color-1-layout;
+    }
+  }
+}
+/*Links colors (end)*/
+
+
+/*Icon colors (begin)*/
+.icons {
+  &__svg {
+
+  }
+  &__svg-color {
+    fill: $color-7-layout;
+  }
+  &__img {
+
+  }
+}
+/*Icon colors (end)*/
+
+
+/*Buttons colors( begin )*/
+.btn {
+  color: inherit;
+  background-color: transparent;
+
+  &:hover, &:focus {
+    color: inherit;
+    background-color: $color-1-layout;
+  }
+}
+
+.button {
+  color: inherit;
+  background-color: transparent;
+
+  &:hover, &:focus {
+    cursor: pointer;
+
+    .icons__svg-color {
+      fill: $color-theme-layout;
+    }
+  }
+}
+/*Buttons colors( end )*/
+
+
+.form-control {
+  background-color: transparent;
+}
+
+
+/*Bootstrap list-group colors (begin)*/
+.list-group-item.active {
+  .mixin_bg_color( 1 );
+  border-color: $color-1-layout;
+
+  &.active:hover, &.active:focus {
+    .mixin_bg_color( 4 );
+    border-color: $color-1-layout;
+  }
+}
+
+.list-group-item.active > .badge,
+.nav-pills > .active > .links > .badge {
+  .mixin_color( 1 );
+}
+/*Bootstrap list-group colors (end)*/
+
+
+/*Pagination ( begin )*/
+.pagination > li > a {
+  color: inherit;
+}
+/*Pagination ( end ) */
+
+
+
+
+
+
+/*Custom checkbox styles ( begin ) */
+.custom-checkbox {
+  &__label .cr {
+    border: 1px solid #a9a9a9;
+  }
+}
+/*Custom checkbox styles ( end ) */
+

@@ -1,0 +1,15 @@
+/*Images */
+.image-wrapper {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.image {
+  .mixin_absolute_alignment ();
+  .mixin_max-stretching();
+}
+
+.image--responsive {
+  .mixin_image-responsive ( width; );
+}

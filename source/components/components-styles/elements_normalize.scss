@@ -1,0 +1,81 @@
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+legend {
+  margin-bottom: 0px;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+
+.form-control {
+  font-size: $body--font-size;
+  .mixin_input-group-height( $body--font-size; 10; );
+}
+
+.table {
+  margin-bottom: 0px;
+}
+
+.media {
+  margin-top: 0px;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: transparent;
+}
+.navbar-nav > li > a {
+  &:hover, &:focus {
+    background-color: transparent;
+  }
+}
+
+.btn {
+  font-size: $body--font-size;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:hover ,
+.pagination > .active > a:focus {
+  background-color: $color-theme-layout;
+  border-color: $color-theme-layout;
+}
+
+.pager li > a, .pager li > span {
+  border-radius: 4px;
+}
+
+.badge {
+  color: inherit;
+  background-color: inherit;
+}
+
+.dropdown-menu {
+  font-size: $body--font-size;
+}
+
+.dropdown-menu > li > a {
+  color: inherit;
+}
+
+.panel-group {
+  margin-bottom: 0px;
+}

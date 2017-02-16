@@ -1,0 +1,141 @@
+.links {
+  text-decoration: none;
+}
+
+
+.icons {
+  &__svg {
+
+    &--text {
+      margin-right: 7px;
+    }
+  }
+  &__svg-color {
+
+  }
+  &__img {
+
+  }
+}
+
+
+.main-modules {
+
+}
+
+/*Sections ( begin )*/
+.section {
+  margin-bottom: 60px;
+}
+
+.section-desc {
+  margin-bottom: $section-desc-margin-bottom;
+}
+/*Sections ( end )*/
+
+
+/*Sticky footer ( begin )*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.page-wrapper {
+  //if js failed
+  //margin-bottom: $footer-height;
+}
+/*Sticky footer ( end )*/
+
+
+/*Allign elements (begin)*/
+.allign-middle {
+  .mixin_inline-vertical-allign ( middle )
+}
+
+.allign-top {
+  .mixin_inline-vertical-allign ( top );
+}
+/*Allign elements (end)*/
+
+
+/*Vertical allign for cols ( begin ) */
+.col-table {
+  display: table;
+}
+.col-table__cell {
+  display: table-cell;
+
+  &--allign-middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+/*Vertical allign for cols ( end ) */
+
+
+
+.badge {
+  border-radius: 2px;
+}
+
+
+/*Custom checkbox styles ( begin ) */
+.custom-checkbox {
+  &__input {
+    display: none;
+  }
+  &__label {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  &__label .cr {
+    position: relative;
+    display: inline-block;
+    border-radius: .25em;
+    width: 1.0em;
+    height: 1.0em;
+    float: left;
+    margin-right: .5em;
+    top: 0.3em;
+  }
+  &__label .cr .cr-icon {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+  }
+  &__icon::before {
+    content: " ";
+    position: relative;
+    bottom: 7px;
+    right: 1px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url("${icons-path}/check.svg") no-repeat;
+  }
+}
+/*Custom checkbox styles ( end ) */
+
+
+/*Forms ( begin ) */
+.forms-title {
+  display: block;
+  margin-bottom: 15px;
+}
+/*Forms ( end ) */
+
+
+/*Theme margins ( begin )*/
+.theme-margin {
+  &__right-small {
+    margin-right: 7px;
+  }
+  &__right-normal {
+    margin-right: 15px;
+  }
+  &__right-double {
+    margin-right: 30px;
+  }
+}
+/*Theme margins ( begin )*/
+

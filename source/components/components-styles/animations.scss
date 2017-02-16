@@ -1,0 +1,41 @@
+.links {
+  transition: color $transition-duration-links, background-color $transition-duration-links;
+}
+
+
+.icons__svg-color {
+  transition: fill $transition-duration-svgs;
+}
+
+
+.btn, .list-group-item {
+  transition: background-color $transition-duration-buttons, border-color $transition-duration-buttons,
+}
+
+
+.custom-checkbox {
+  &__input + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+  }
+  &__input:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+  }
+  &__input:disabled + .cr {
+    opacity: .5;
+  }
+}
+
+
+.social-icons {
+  &__link {
+    transition: transform $transition-duration-links;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+}
+

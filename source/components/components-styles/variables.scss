@@ -1,0 +1,120 @@
+/*Colors (begin)*/
+  /*Layout colors*/
+  $color-theme-layout:                                #43999b;
+  $color-1-layout:                                    $color-theme-layout;
+  $color-2-layout:                                    #171717;
+  $color-3-layout:                                    #7a7a7a;
+  $color-4-layout:                                    #ffffff;
+  $color-5-layout:                                    #999999;
+  $color-6-layout:                                    #c8a760;
+  $color-7-layout:                                    #333333;
+  $color-8-layout:                                    #9f7430;
+  $color-9-layout:                                    #ссс;
+  $color-tr-layout:                                   transparent;
+
+
+  /*Colors elements*/
+    /*Header*/
+    $color-1-contrast-header-1:                       $color-4-layout;
+    $color-2-contrast-header-1:                       $color-2-layout;
+    /*Footer*/
+    $color-1-contrast-footer-1:                       $color-1-contrast-header-1;
+    $color-2-contrast-footer-1:                       $color-2-contrast-header-1;
+    /*Rating*/
+    $color-rating-value:                              $color-6-layout;
+    /*Markers*/
+    $color-markers:                                   $color-1-layout;
+    /*Banners*/
+    $color-banner-1:                                  #34495E;
+    $color-banner-2:                                  #34495E;
+    $color-banner-3:                                  #34495E;
+    /*Forms*/
+    $color-placeholder--font-color:                   $color-1-layout;
+
+    /*Colors elements when cursor mouse over them*/
+    $color-shopping-cart-header-hover:                $color-1-layout;
+    $color-links-hover:                               $color-1-layout;
+    $color-svg-hover:                                 $color-1-layout;
+/*Colors (end)*/
+
+
+/*Path (begin)*/
+  /*Images*/
+  $images-path:                                       '/tea-shop/source/images';
+  /*Icons*/
+  $icons-path:                                        '/tea-shop/source/icons';
+  /*Fonts*/
+  $fonts-path:                                        '/tea-shop/source/global_third_components/fonts';
+/*Path (end)*/
+
+
+/*Fonts*/
+  /*Dimensions*/
+    /*Body*/
+    $body--font-size:                                 13px;
+    /*Buttons*/
+    $teashop-button--font-size:                       15px;
+    /*Logo*/
+    $logo-link-title-first-letter:                    60px;
+    $logo-link-title-last-letters:                    30px;
+    $logo-link-sub-title:                             15px;
+    $logo-link-height:                                $logo-link-title-first-letter;
+
+  /*Families*/
+  $font-family-3-regular-typeface:                    'Open-Sans-Regular';
+  $font-family-3-semi-bold-typeface:                  'Open-Sans-Semi-Bold';
+  $font-family-3-bold-typeface:                       'Open-Sans-Bold';
+  $font-family-3-extra-bold-typeface:                 'Open-Sans-Extra-Bold';
+    /*Body*/
+    $body--font-family:                               'Open-Sans-Regular';
+    /*Buttons*/
+    $teashop-button--font-family:                     'Open-Sans-Bold';
+
+    /*Font measures*/
+    $measures-of-font:                                px;
+    $measures-of-font-letter-spacing:                 px;
+    $measures-of-font-line-height:                    px;
+/*Fonts (end)*/
+
+
+/*Block model properties (begin)*/
+  $margin-bottom-circle-icon__wrapper:                15px;
+
+
+  $section-desc-margin-bottom:                        90px;
+
+
+  $carousel-button-height:                            40px;
+  $carousel-button-width:                             40px;
+
+
+  $product-carousel-button-width:                     40px;
+  $product-carousel-button-height:                    40px;
+  $product-carousel-height:                           150px;
+
+
+  $footer-height:                                     1365px;
+
+
+  $border-radius:                                     4px;
+
+
+  $price-regulator-inputs-separator-width:            10px;
+
+
+  $masonry-grid-1-image-left-wrapper-height:          570px;
+  $masonry-grid-1-image-right-top-height:             275px;
+  $masonry-grid-1-item-margin-bottom:                 30px;
+  $masonry-grid-1-image-right-bottom-wrapper-height:  $masonry-grid-1-image-left-wrapper-height - $masonry-grid-1-image-right-top-height - $masonry-grid-1-item-margin-bottom;
+
+  /*Blocks measures*/
+  $measures-of-blocks:                                px;
+/*Block model properties (end)*/
+
+
+/*Animation (begin)*/
+  /*Duration*/
+  $transition-duration-links:                         0.7s;
+  $transition-duration-svgs:                          0.5s;
+  $transition-duration-buttons:                       0.5s;
+/*Animation (end)*/

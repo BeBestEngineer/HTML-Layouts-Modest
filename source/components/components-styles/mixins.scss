@@ -1,0 +1,167 @@
+.mixin_contrast-colors( $text-color: $color-7-layout; $background-color: $color-4-layout; ) {
+  & {
+    color: $text-color;
+    background-color: $background-color;
+  }
+  & .icons__svg-color {
+    fill: $text-color;
+  }
+}
+
+
+.mixin_contrast-colors-buttons( $text-color: $color-7-layout; $background-color: $color-4-layout; $color-hover-focus: $color-4-layout; $background-color-hover-focus: $color-theme-layout; ) {
+  border-color:     $text-color;
+  color:            $text-color;
+  background-color: $background-color;
+
+  &:hover, &:focus {
+    border-color:     $color-hover-focus;
+    color:            $color-hover-focus;
+    background-color: $background-color-hover-focus;
+
+    & .icons__svg-color {
+      fill: $color-hover-focus;
+    }
+  }
+}
+
+
+/*Absolute stretching mixin*/
+.mixin_absolute_stretching () {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+/*Max stretching*/
+.mixin_max-stretching() {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+/*Absolute alignment mixin*/
+.mixin_absolute_alignment () {
+  .mixin_absolute_stretching ();
+
+  margin: auto;
+}
+
+
+.mixin_image-responsive( $vector:height; ) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  ${vector}: 100%;
+
+  & when ( $vector = width ) {
+    height: auto;
+  }
+  & when ( $vector = height ) {
+    width: auto;
+  }
+}
+
+
+/*LESS Hat Font Face mixin*/
+.font-face($fontname, $fontfile, $fontweight:normal, $fontstyle:normal) {
+  font-family: "${fontname}";
+          src: url("${fontfile}.eot");
+          src: url("${fontfile}.eot?#iefix") format("embedded-opentype"),
+               url("${fontfile}.woff") format("woff"),
+               url("${fontfile}.ttf") format("truetype"),
+               url("${fontfile}.svg#${fontname}") format("svg");
+  font-weight: $fontweight;
+  font-style:  $fontstyle;
+}
+
+
+/*Custom font mixin*/
+.mixin_custom-font( $font-family:$body--font-family; $font-size:$body--font-size; $text-transform:none; $letter-spacing:normal; $line-height:normal; ) {
+  font-family:    $font-family;
+  font-size:      unit($font-size, $measures-of-font);
+  text-transform: $text-transform;
+
+  & when ( isnumber( $letter-spacing ) ) {
+    letter-spacing: unit($letter-spacing, $measures-of-font-letter-spacing);
+  }
+  & when not ( isnumber( $letter-spacing ) ) {
+    letter-spacing: $letter-spacing;
+  }
+
+  & when ( isnumber( $line-height ) ) {
+    line-height: unit($line-height, $measures-of-font-line-height);
+  }
+  & when not ( isnumber( $line-height ) ) {
+    line-height: $line-height;
+  }
+}
+
+
+.mixin_block-height( $height ) {
+  height: unit($height, $measures-of-blocks);;
+}
+
+
+.mixin_svg-text-color( $color ) {
+  color: $color;
+  & .icons__svg-color {
+    fill: $color;
+  }
+  & .links {
+    color: $color;
+  }
+}
+
+
+.mixin_color ( $color ) {
+    color: ~'${color-${color}-layout}';
+}
+
+
+.mixin_bg_color ( $color ) {
+  background-color: ~'${color-${color}-layout}';
+}
+
+
+.mixin_inline-vertical-allign ( $position ) {
+  display: inline-block;
+  vertical-align: $position;
+}
+
+
+.mixin_input-group-height( $font-height; $padding-top-bottom; ) {
+  $height:     $font-height + $padding-top-bottom * 2;
+  height:      unit( $height, $measures-of-font );
+}
+
+
+.mixin_text-fields-colors( $background-color: transparent; $placeholder-color: $color-1-layout; $text-color: $color-4-layout; ) {
+  input, textarea {
+    background-color: $background-color;
+    color: $text-color;
+  }
+  .form-control::-moz-placeholder {
+    color: $placeholder-color;
+  }
+}
+
+
+.mixin_theme-border( $color ) {
+  border: 1px solid $color;
+}
+
+
+.mixin_carousel-button-position() {
+  margin-top: -$carousel-button-height / 2;
+  top:        -$section-desc-margin-bottom / 2;
+}
+
+
+.mixin_product-carousel-button-position() {
+  margin-top: -$product-carousel-button-height / 2;
+  top:         $product-carousel-height / 2;
+}
