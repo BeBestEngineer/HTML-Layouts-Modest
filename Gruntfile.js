@@ -11,8 +11,10 @@ module.exports = function(grunt) {
       sourceLayoutScripts: ['source/components/components-scripts/collected-scripts/layout.js'],
       sourceVendorScripts: ['source/components/components-scripts/collected-scripts/vendor.js'],
 
-      buildStyles:         ['build/wp-content/themes/moddest/css/**'],
-      buildScripts:        ['build/wp-content/themes/moddest/js/**']
+      buildLayoutStyles:   ['build/wp-content/themes/moddest/css/layout.css'],
+      buildVendorStyles:   ['build/wp-content/themes/moddest/css/vendor.css'],
+      buildLayoutScripts:  ['build/wp-content/themes/moddest/js/layout.js'],
+      buildVendorScripts:  ['build/wp-content/themes/moddest/js/vendor.js']
     },
 
     concat: {
@@ -60,23 +62,48 @@ module.exports = function(grunt) {
     },
 
     copy: {
-      build: {
+      toBuildStyles: {
         files: [
           {
             expand: true,
-            cwd: "source/components/components-styles/collected-styles",
+            cwd: "source/components/components-styles/collected-styles/css",
             src: [
               "**"
             ],
-            dest: "build/css"
-          },
+            dest: "build/wp-content/themes/moddest/css"
+          }
+        ]
+      },
+      toBuildScripts: {
+        files: [
           {
             expand: true,
             cwd: "source/components/components-scripts/collected-scripts",
             src: [
               "**"
             ],
-            dest: "build/js"
+            dest: "build/wp-content/themes/moddest/js"
+          }
+        ]
+      }
+    },
+
+    replace: {
+      pathFonts: {
+        options: {
+          patterns: [
+            {
+              match: /\/WP\/WP-Moddest\/source\//g,
+              replacement: 'http://php/WP/theme-Moddest/build/wp-content/themes/moddest/'
+            }
+          ]
+        },
+        files: [
+          {
+            expand: true,
+            src: [
+              'build/wp-content/themes/moddest/css/layout.css'
+            ]
           }
         ]
       }
@@ -88,7 +115,7 @@ module.exports = function(grunt) {
       },
       sourceStyles: {
         files: ['source/modules/**/*.scss'],
-        tasks: ['clean:sourceLayoutStyles', 'concat:layoutStyles', 'sass' ]
+        tasks: ['clean:sourceLayoutStyles', 'concat:layoutStyles', 'sass', 'clean:buildLayoutStyles', 'copy:toBuildStyles', 'replace:pathFonts' ]
       }
     }
   });
@@ -106,6 +133,7 @@ module.exports = function(grunt) {
     'clean',
     'concat',
     'sass',
-    'copy'
+    'copy',
+    'replace:pathFonts'
   ]);
 };
