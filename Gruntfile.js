@@ -125,7 +125,7 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
 
-  grunt.registerTask('whatch-project', [ 'watch' ]);
+  grunt.registerTask('watch-project', [ 'watch' ]);
 
 
   // Default task(s).
@@ -134,6 +134,6 @@ module.exports = function(grunt) {
     'concat',
     'sass',
     'copy',
-    'replace:pathFonts'
+    'replace'
   ]);
 };
