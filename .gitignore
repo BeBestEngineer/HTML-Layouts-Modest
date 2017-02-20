@@ -11,17 +11,18 @@ node_modules/
 layout.css.map
 
 
-/build/*
-/build/wp-content/*
-/build/wp-content/themes/*
-/build/wp-content/themes/moddest/css/*
-/build/wp-content/themes/moddest/js/*
+build/
+build/wp-content/themes/moddest/css/*
+build/wp-content/themes/moddest/js/*
+build/wp-content/themes/moddest/images/**/*
 
-/source/images/logo-theme/*
-/source/components/components-styles/collected-styles/*
-/source/components/components-scripts/collected-scripts/*
 
-!/build/wp-content/themes/moddest/
+source/images/logo-theme/
+source/components/components-styles/collected-styles/*
+source/components/components-scripts/collected-scripts/*
+
+
+!build/wp-content/themes/moddest/
 
 
 
