@@ -1,9 +1,29 @@
-.idea/
-.sass-cache/
-node_modules/
-build/
-
 readme.txt
+
+
+.idea/
+
+
+node_modules/
+
+
+.sass-cache/
+layout.css.map
+
+
+/build/*
+/build/wp-content/*
+/build/wp-content/themes/*
+/build/wp-content/themes/moddest/css/*
+/build/wp-content/themes/moddest/js/*
+
+/source/images/logo-theme/*
+/source/components/components-styles/collected-styles/*
+/source/components/components-scripts/collected-scripts/*
+
+!/build/wp-content/themes/moddest/
+
+
 
 
 
