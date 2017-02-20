@@ -1,6 +1,10 @@
 /*SeparatoR*/
 /*SeparatoR*/
 /*SeparatoR*/
+.theme-margin__bottom {
+  display: block;
+  margin-bottom: 15px; }
+
 .img-responsive {
   width: 100%; }
 
@@ -72,6 +76,12 @@
 
 .about-sublist-item:not(:first-child) {
   margin-top: 30px; }
+
+.about-sublist__number {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #387c96; }
 
 .work-item {
   margin-bottom: 30px; }
